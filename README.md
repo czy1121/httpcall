@@ -66,12 +66,14 @@ http<TestService>().test().result(this) {
 }.withSpinning(this) 
 ```
  
-设置全局异常处理
+设置默认Retrofit工厂和全局错误处理程序
 
-```
-HttpCall.globalErrorHandler = { thowable ->
+``` 
+HttpCall.init(retrofitFactory = {
     // ...
-}
+}, errorHandler = { throwable ->
+    // ...
+}) 
 
 ```
 
