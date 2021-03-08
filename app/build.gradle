@@ -1,0 +1,10 @@
+
+apply from: "https://gitee.com/ezy/gradle/raw/master/build-library-app.gradle"
+
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    implementation project(':httpcall')
+}
